@@ -2,3 +2,103 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/index</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/store</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/reviews</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/gallery-All</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/gallery-Interior</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/gallery-Exterior</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Full-Detail-Service</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Interior-Detailing</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Exterior-Detailing</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Ceramic-Coating</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Paint-Correction</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Stain-Extraction-&-Odor-Removal</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Pet-Hair-Removal</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://palmettorevivedetailing.com/service-Headlight-Restoration</loc>
+        <lastmod>2022-04-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+</urlset>
