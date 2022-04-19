@@ -256,13 +256,16 @@
                         })
                         .catch(result => {
                             console.log(result)
-                            alert("Please make sure to fill out each field")
+                            alert("There was a problem sending your text. Please reach out to ProPhone.")
                         })
 
                         setTimeout(() => {
+                            const sendTextModalId = document.getElementById("send-text-modal")
                             const modalId = document.getElementById("text-thank-you")
                             modalId.style.display = 'none';
-                            reload()
+                            if (sendTextModalId.style.display === 'none') {
+                                reload()
+                            }
                         }, 5000);
 
                         const reload = () => {
@@ -1058,7 +1061,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 12,
+        amountOfImages: 7,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1079,11 +1082,11 @@
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="" /> -->
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="" /> -->
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="" /> -->
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="" /> -->
                             
                         </div>
 
@@ -1205,116 +1208,11 @@
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="" /> -->
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="" /> -->
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/313c6029-fa42-401d-ba89-70a7ebc93b85.jpeg" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/313c6029-fa42-401d-ba89-70a7ebc93b85.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/313c6029-fa42-401d-ba89-70a7ebc93b85.jpeg" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/313c6029-fa42-401d-ba89-70a7ebc93b85.jpeg" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6001b977-425f-493a-8017-af473b30618a.jpeg" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6001b977-425f-493a-8017-af473b30618a.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6001b977-425f-493a-8017-af473b30618a.jpeg" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/6001b977-425f-493a-8017-af473b30618a.jpeg" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ce736467-414f-4493-a60e-251c4aec3e31.jpeg" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ce736467-414f-4493-a60e-251c4aec3e31.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ce736467-414f-4493-a60e-251c4aec3e31.jpeg" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/ce736467-414f-4493-a60e-251c4aec3e31.jpeg" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/361c9803-5724-4934-a9d9-e2312835ad4b.jpeg" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/361c9803-5724-4934-a9d9-e2312835ad4b.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/361c9803-5724-4934-a9d9-e2312835ad4b.jpeg" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/361c9803-5724-4934-a9d9-e2312835ad4b.jpeg" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5a250921-03a7-436e-b019-f98b8332a0e0.jpeg" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/5a250921-03a7-436e-b019-f98b8332a0e0.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5a250921-03a7-436e-b019-f98b8332a0e0.jpeg" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/5a250921-03a7-436e-b019-f98b8332a0e0.jpeg" alt="" /> -->
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="" /> -->
                             
                         </div>
 
@@ -1377,7 +1275,7 @@
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -1425,47 +1323,7 @@
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 6">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628d78ef-d4d5-4f52-96d4-349d8e397ad9.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 7">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/313c6029-fa42-401d-ba89-70a7ebc93b85.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 8">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6001b977-425f-493a-8017-af473b30618a.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 9">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ce736467-414f-4493-a60e-251c4aec3e31.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 10">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/361c9803-5724-4934-a9d9-e2312835ad4b.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
-                                            <p lorem="1" class="mt-3 text-gray-500"></p>
-                                        
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 11">
-                                            
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5a250921-03a7-436e-b019-f98b8332a0e0.jpeg" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d73097fe-62e6-400c-b3dc-c28fdfc85ab0.png" alt="Interior for PalmettoRevive Automotive Detailing in Charleston, SC" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -1610,7 +1468,7 @@
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
                           <li>
                               <a
-                                  href="#"
+                                  href="index"
                                   class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
                                   >Home</a
                               >
@@ -1743,31 +1601,31 @@
                       <ul role="list" class="mt-4 -mx-1 space-y-4">
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Sun:  None 
+                                Sun:  0:00am - 0:00am 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Mon:  None 
+                                Mon:  0:00am - 0:00am 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Tues:  None 
+                                Tues:  8:00am - 6:00pm 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Wed:  None 
+                                Wed:  8:00am - 6:00pm 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Thu:  None 
+                                Thu:  8:00am - 6:00pm 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Fri:  None 
+                                Fri:  8:00am - 6:00pm 
                             </li>
                         
                             <li class="p-1 text-base text-gray-100 rounded  hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-offset-2 ring-opacity-75">
-                                Sat:  None 
+                                Sat:  8:00am - 6:00pm 
                             </li>
                         
                       </ul>
@@ -1860,7 +1718,7 @@
 
                 <!-- Form -->
 
-                <form class="overflow-y-scroll pb-20 sm:w-full">
+                <form class="overflow-y-auto pb-20 sm:w-full" onsubmit="send_sms('PalmettoRevive-Automotive-Detailing')">
                     <div class="flex-grow h-full overflow-x-hidden overflow-y-auto">
                         <div class="h-full px-6 pb-1 mt-6 space-y-6 sm:grid sm:grid-cols-2 sm:min-w-max sm:space-x-3">
                             <!-- Full Name -->
@@ -1882,6 +1740,7 @@
                             <div>
                                 <label for="contact-phone-number" class="sr-only">Phone Number</label>
                                 <input
+                                        required
                                         type="tel"
                                         name="phone-number"
                                         id="contact-phone-number"
@@ -2037,7 +1896,6 @@
                                 <div class='sm:flex-grow'>
                                     <label for="contact-concern" class="sr-only">How can we help you?</label>
                                     <textarea
-                                            required
                                             id="contact-concern"
                                             name="concern"
                                             rows="4"
@@ -2151,47 +2009,56 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="flex items-center justify-center w-full">
+                        <button     class="
+                                    py-2.5
+                                    w-4/5
+                                    fixed
+                                    bottom
+                                    text-sm
+                                    font-medium
+                                    transition
+                                    border-2 border-transparent
+                                    rounded-md
+                                    bg-primary
+                                    text-primary-foreground
+                                    focus:outline-none
+                                    hover:bg-primary-darker
+                                    bg-primar
+                                    focus-visible:ring-2
+                                    ring-primary ring-opacity-75 ring-offset-2"
+                                    style="
+                                    position:absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    transform: translate(-50%, -50%);
+                                    margin-top: 0;
+                                    margin-bottom: 0">Send
+                        </button>
+                    </div>
                 </form>
-                <div class="flex
-                                items-center
-                                justify-center
-                                w-full
-                            "
-                     onclick="send_sms('PalmettoRevive-Automotive-Detailing')"
-                >
-                    <button class="
-                                py-2.5
-                                w-4/5
-                                fixed
-                                bottom
-                                text-sm
-                                font-medium
-                                transition
-                                border-2 border-transparent
-                                rounded-md
-                                bg-primary
-                                text-primary-foreground
-                                focus:outline-none
-                                hover:bg-primary-darker
-                                bg-primar
-                                focus-visible:ring-2
-                                ring-primary ring-opacity-75 ring-offset-2" 
-                                style="
-                                position:absolute;
-                                left: 50%;
-                                bottom: 0;
-                                transform: translate(-50%, -50%);
-                                margin-top: 0;
-                                margin-bottom: 0"> Send
-                    </button>
-                </div>
 
 
             </div>
         </div>
     </div>
 </template>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = Array.from(
+            document.querySelectorAll('input[name=email], input[name=phone-number]')
+        )
+
+        const inputListener = e => {
+            inputs
+                .filter(i => i !== e.target)
+                .forEach(i => (i.required = !e.target.value.length))
+        }
+
+        inputs.forEach(i => i.addEventListener('input', inputListener))
+    })
+</script>
 <div
 	class="fixed top-36 inset-x-0 z-50 mx-auto p-4 border w-96 shadow-lg rounded-md bg-white backdrop-blur-sm"
     id="text-thank-you"
